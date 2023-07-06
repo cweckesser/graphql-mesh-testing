@@ -12,7 +12,7 @@ This module contains a collection of test cases for the OmniGraph OpenAPI loader
 
 **Description**
 
-For a component combining properties of different objects via the "allOf" keyword, if any property of these objects exists in more than one of them and this property is an also an object, then these object-like overlapping properties will not be merged into one single object, combining all their different sub-properties. Instead, only the sub-properties of the last object-like overlapping property will be included in the resulting object.
+For a component combining properties of different objects via the "allOf" keyword, if any property of these objects exists in more than one of them and this property is also an object, then these object-like overlapping properties will not be merged into one single object, combining all their different sub-properties. Instead, only the sub-properties of the last object-like overlapping property will be included in the resulting object.
 
 To understand this better, let's consider the following example extracted from the files used to reproduce the issue.
 
