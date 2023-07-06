@@ -3,7 +3,7 @@ import { GraphQLObjectType } from 'graphql';
 import * as schemaLoader from './schema.loader';
 
 describe('Schema loader', () => {
-	it('Should be possible to load a schema with components having overlapping properties', async () => {
+	it('Should be possible to load a schema with components having any overlapping properties merged', async () => {
 		// Load schema
 		const schema = await schemaLoader.loadSchema('./graphql/schemas/test-schema.json');
 
