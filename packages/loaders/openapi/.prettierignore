@@ -1,0 +1,4 @@
+converage/
+dist/
+graphql/schemas/
+node_modules/

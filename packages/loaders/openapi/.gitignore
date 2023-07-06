@@ -1,0 +1,6 @@
+# GraphQL Mesh directories
+graphql/.mesh
+src/generated/
+
+# Code coverage reports
+coverage/
