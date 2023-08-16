@@ -7,4 +7,5 @@ This will facilitate understanding how thee features work and also aid in the re
 
 ### Test cases
 
+- [Mesh Config](./packages/config/README.md)
 - [OpenAPI loader](./packages/loaders/openapi/README.md)

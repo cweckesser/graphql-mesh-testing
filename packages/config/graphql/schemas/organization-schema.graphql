@@ -1,0 +1,17 @@
+scalar UUID
+
+type Department {
+	id: UUID!
+	name: String!
+	employees: [Employee!]
+}
+
+type Employee {
+	personId: UUID!
+	position: String!
+}
+
+type Query {
+	getDepartments: [Department!]
+	getEmployees(departmentId: UUID!): [Employee!]
+}

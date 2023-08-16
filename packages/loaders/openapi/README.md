@@ -4,7 +4,7 @@ This module contains a collection of test cases for the OmniGraph OpenAPI loader
 
 ## Existing test cases
 
-### Should be possible to load a schema with components having any overlapping properties merged
+### [FIXED] Should be possible to load a schema with components having any overlapping properties merged
 
 **Test file location**
 
@@ -87,3 +87,8 @@ Instead, only the last occurrence of `attributes` takes precedence in the result
 	}
 }
 ```
+
+**Update**
+
+- This issue was reported in the GraphQL Mesh GitHub repository [here](https://github.com/Urigo/graphql-mesh/issues/5641) and a [PR](https://github.com/Urigo/graphql-mesh/pull/5643) with a proposed fix has already been merged.
+- The package [@graphql-mesh/json-schema@0.95.3](https://github.com/Urigo/graphql-mesh/releases/tag/release-1692058418907) containing the fix was released on August 15, 2023.

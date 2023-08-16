@@ -1,0 +1,11 @@
+serve:
+  port: ${PORT}
+
+customFetch: ../src/utils/custom-fetch.ts
+
+sources:
+
+  - name: Organization
+    handler:
+      graphql:
+        source: ./schemas/organization-schema.graphql

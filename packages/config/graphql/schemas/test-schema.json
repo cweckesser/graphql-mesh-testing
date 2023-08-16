@@ -1,0 +1,86 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Test API",
+    "description": "Test OpenAPI."
+  },
+  "paths": {
+		"/api/people/": {
+      "get": {
+        "operationId": "get_people",
+        "summary": "Get People",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Person"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+	},
+	"components": {
+		"schemas": {
+			"Person": {
+        "properties": {
+					"data": {
+						"allOf": [
+							{
+								"properties": {
+									"attributes": {
+										"description": "Address fields",
+										"properties": {
+											"street_name": {
+												"type": "string"
+											},
+											"street_number": {
+												"type": "string"
+											},
+											"postal_code": {
+												"type": "string"
+											},
+											"city": {
+												"type": "string"
+											},
+											"state": {
+												"type": "string"
+											},
+											"country": {
+												"type": "string"
+											}
+										}
+									}
+								}
+							},
+							{
+								"properties": {
+									"attributes": {
+										"description": "Contact fields",
+										"properties": {
+											"personal_email": {
+												"type": "string"
+											},
+											"work_email": {
+												"type": "string"
+											},
+											"personal_phone_number": {
+												"type": "string"
+											},
+											"work_phone_number": {
+												"type": "string"
+											}
+										}
+									}
+								}
+							}
+						]
+					}
+				}		
+			}
+		}
+	}
+}
