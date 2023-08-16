@@ -62,6 +62,6 @@ The issue occurs when the path to the custom fetch is specified as a **relative 
 
 The path needs, therefore, to be adjusted by navigating "one level up", this is, by prepending `../` to the relative path of the custom fetch file.
 
-In the current implementation that generates the `import` statement that [loads custom fetch file]((https://github.com/Urigo/graphql-mesh/blob/1cb22ee63e13910c249587bd7fecacbc7d6dae87/packages/config/src/utils.ts#L66)), it can be observed that relative paths are not being adjusted. Here, the `resolveCustomFetch` function loads the custom fetch by invoking the `getPackage` function.
+In the current implementation that generates the `import` statement that [loads custom fetch file](https://github.com/Urigo/graphql-mesh/blob/1cb22ee63e13910c249587bd7fecacbc7d6dae87/packages/config/src/utils.ts#L66), it can be observed that relative paths are not being adjusted. Here, the `resolveCustomFetch` function loads the custom fetch by invoking the `getPackage` function.
 
 On the other hand, in the implementation that generates the code that [dynamically loads envelop plugins](https://github.com/Urigo/graphql-mesh/blob/1cb22ee63e13910c249587bd7fecacbc7d6dae87/packages/config/src/process.ts#L567-L571) the relative paths are adjusted accordingly.
