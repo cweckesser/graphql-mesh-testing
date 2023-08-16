@@ -53,14 +53,14 @@ The `.mesh` directory will contain a `schemas` folder (containing the definition
 
 If the Mesh project requires a custom fetch function, it can be implemented in a JS/TS file, and then that file can be specified in the `.meshrc.yml` configuration file via the `customFetch` property. Afterwards, when the project is built, the above-mentioned `.mesh/index.ts` file will contain an `import` statement with the path to the file implementing the custom fetch.
 
-The issue occurs when the path to the custom fetch is specified as a **relative path**, because that path is not adjusted properly when included in the `index.ts` file. This is, the path specified in the `.meshrc.yml` file cannot be use verbatim in the `index.ts` file, due to the latter being located in a different folder:
+The issue occurs when the path to the custom fetch is specified as a **relative path**, because that path is not adjusted properly when included in the `index.ts` file. This is, the path specified in the `.meshrc.yml` file cannot be used verbatim in the `index.ts` file, due to the latter being located in a different folder:
 
 ```sh
 <PATH_TO_MY_MESH_PROJECT>/graphql/.meshrc.yml
 <PATH_TO_MY_MESH_PROJECT>/graphql/.mesh/index.ts # Located in a sub-folder from the .meshrc.yml file (i.e. on a "1st level" sub-folder)
 ```
 
-The path needs therefore to be adjusted by navigating "one level up", this is, by prepending `../` to the relative path of the custom fetch file.
+The path needs, therefore, to be adjusted by navigating "one level up", this is, by prepending `../` to the relative path of the custom fetch file.
 
 In the current implementation that generates the `import` statement that [loads custom fetch file]((https://github.com/Urigo/graphql-mesh/blob/1cb22ee63e13910c249587bd7fecacbc7d6dae87/packages/config/src/utils.ts#L66)), it can be observed that relative paths are not being adjusted. Here, the `resolveCustomFetch` function loads the custom fetch by invoking the `getPackage` function.
 
