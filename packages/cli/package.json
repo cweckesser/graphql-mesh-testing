@@ -23,7 +23,7 @@
 		"@graphql-codegen/cli": "^5.0.0",
 		"@graphql-codegen/typescript": "^4.0.1",
 		"@graphql-codegen/typescript-resolvers": "^4.0.1",
-		"@graphql-mesh/cli": "^0.87.1",
+		"@graphql-mesh/cli": "^0.87.7",
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-import-resolver-typescript": "^3.5.5",
