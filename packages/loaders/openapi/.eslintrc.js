@@ -27,13 +27,6 @@ module.exports = {
 		'plugin:import/typescript',
 		'plugin:@typescript-eslint/eslint-recommended',
 		'plugin:@typescript-eslint/recommended',
-		// 'eslint:recommended',
-		// 'plugin:@typescript-eslint/eslint-recommended',
-		// 'plugin:@typescript-eslint/recommended',
-		// 'plugin:import/errors',
-		// 'plugin:import/warnings',
-		// 'plugin:import/typescript',
-		// 'plugin:prettier/recommended',
 	],
 	rules: {
 		'prettier/prettier': 1,

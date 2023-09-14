@@ -4,7 +4,7 @@ This module contains a collection of test cases for GraphQL Mesh's config packag
 
 ## Existing test cases
 
-### Should be possible to resolve a custom fetch function when building a GraphQL Mesh project
+### [FIXED] Should be possible to resolve a custom fetch function when building a GraphQL Mesh project
 
 **Description**
 
@@ -65,3 +65,8 @@ The path needs, therefore, to be adjusted by navigating "one level up", this is,
 In the current implementation that generates the `import` statement that [loads custom fetch file](https://github.com/Urigo/graphql-mesh/blob/1cb22ee63e13910c249587bd7fecacbc7d6dae87/packages/config/src/utils.ts#L66), it can be observed that relative paths are not being adjusted. Here, the `resolveCustomFetch` function loads the custom fetch by invoking the `getPackage` function.
 
 On the other hand, in the implementation that generates the code that [dynamically loads envelop plugins](https://github.com/Urigo/graphql-mesh/blob/1cb22ee63e13910c249587bd7fecacbc7d6dae87/packages/config/src/process.ts#L567-L571) the relative paths are adjusted accordingly.
+
+**Update**
+
+- This issue was reported in the GraphQL Mesh GitHub repository [here](https://github.com/Urigo/graphql-mesh/issues/5840) and a [PR](https://github.com/Urigo/graphql-mesh/pull/5841) with a proposed fix has already been merged.
+- The package [@graphql-mesh/config@0.97.4](https://github.com/Urigo/graphql-mesh/releases/tag/release-1692888268292) containing the fix was released on August 24, 2023.
